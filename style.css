@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 10px;
+  background: #f5f0ff; 
+}
+
+.container {
+  height: 351px;
+  width: 546px;
+  border-radius: 15px;
+  background: #bc83f2; 
+  padding: 30px 30px 35px;
+  transition: height 0.2s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container.active {
+  height: 525px;
+}
+
+.container form {
+  height: 273px;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  border-radius: 15px;
+  background: #ffffff; 
+  align-items: center;
+  justify-content: center;
+  transition: height 0.2s ease;
+}
+
+.container.active form {
+  height: 225px;
+  pointer-events: none;
+}
+
+form img {
+  display: none;
+  max-width: 148px;
+}
+
+.container.active form img {
+  display: block;
+}
+
+.container.active form .content {
+  display: none;
+}
+
+form .content i {
+  color: #8a2be2; 
+  font-size: 55px;
+}
+
+form .content p {
+  color: #8a2be2; 
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.container .details {
+  opacity: 0;
+  margin-top: 25px;
+  pointer-events: none;
+}
+
+.container.active .details {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+
+.details textarea {
+  width: 100%;
+  height: 128px;
+  outline: none;
+  resize: none;
+  color: #333333; 
+  font-size: 18px;
+  background: #ffffff; 
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 1px solid #333333;
+}
+
+textarea::-webkit-scrollbar {
+  width: 0px;
+}
+
+textarea:hover::-webkit-scrollbar {
+  width: 5px;
+}
+
+textarea:hover::-webkit-scrollbar-track {
+  background: none;
+}
+
+textarea:hover::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 8px;
+}
+
+.details .buttons {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons button {
+  height: 55px;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  color: #ffffff; 
+  border-radius: 5px;
+  background: #9857d5;
+  transition: transform 0.3s ease;
+  width: calc(100% / 2 - 10px);
+}
+
+.buttons button:active {
+  transform: scale(0.95);
+}
